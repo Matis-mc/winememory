@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="40dp"
+    android:background="#f9f9fa"
+    tools:context=".AddBottle">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/purple_700"
+        android:background="@drawable/round_shape_blue_border"
+        android:fontFamily="@font/abril_fatface"
+        android:padding="5dp"
+        android:textSize="23sp"
+        android:textColorHint="#6884A6"
+        android:hint="Nom" />
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:id="@+id/bottle_view"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/blanc"
+        android:layout_alignParentEnd="true"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontal_scroll_view"
+        android:layout_below="@id/name">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/type_selection">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/blanc_btn"
+            android:text="Blanc"
+            android:checked="true"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/purple_700"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rose_btn"
+            android:text="Rosé"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/purple_700"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rouge_btn"
+            android:text="Rouge"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/purple_700"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/petillant_btn"
+            android:text="Pétillant"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/purple_700"/>
+
+    </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_scroll_view"
+        android:textColor="@color/purple_700"
+        android:padding="5dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/abril_fatface"
+        android:paddingStart="5dp"
+        android:background="@drawable/round_shape_blue_border"
+        android:textColorHint="#6884A6"
+        android:hint="Appelation"
+        android:id="@+id/appelation_txt"
+        android:textSize="15dp"        />
+
+    <EditText
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/year_txt"
+        android:textColor="@color/purple_700"
+        android:fontFamily="@font/abril_fatface"
+        android:layout_below="@id/appelation_txt"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColorHint="#6884A6"
+        android:padding="5dp"
+        android:background="@drawable/round_shape_blue_border"
+        android:textSize="15dp"
+        android:hint="AAAA"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/year_txt"
+        android:text="EQUILIBRE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/abril_fatface"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2.55dp"
+        android:paddingTop="2.5dp"
+        android:textSize="15dp"
+        android:background="@drawable/pink_round_shape"
+        android:id="@+id/equilibre_note"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_equilibre"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/equilibre_note"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="0dp"
+        android:indeterminate="false"
+        android:max="5"
+        android:progress="3"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/purple_700"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar_equilibre"
+        android:text="HARMONIE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/abril_fatface"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2.55dp"
+        android:paddingTop="2.5dp"
+        android:textSize="15dp"
+        android:background="@drawable/pink_round_shape"
+        android:id="@+id/harmonie_note"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_harmonie"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/harmonie_note"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="0dp"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/white"
+        android:max="5"
+        android:progress="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar_harmonie"
+        android:text="COMPLEXITE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/abril_fatface"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2.55dp"
+        android:paddingTop="2.5dp"
+        android:textSize="15dp"
+        android:background="@drawable/pink_round_shape"
+
+        android:id="@+id/complexite_note"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_complexite"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/complexite_note"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="0dp"
+        android:progressBackgroundTint="@color/white"
+        android:indeterminate="false"
+        android:max="5"
+        android:progress="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar_complexite"
+        android:text="PERSISTANCE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/abril_fatface"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2.55dp"
+        android:paddingTop="2.5dp"
+        android:textSize="15dp"
+        android:background="@drawable/pink_round_shape"
+        android:id="@+id/persistance_note"/>
+
+    <SeekBar
+        android:id="@+id/seekBar_persistance"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/persistance_note"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="0dp"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/white"
+        android:max="5"
+        android:progress="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar_persistance"
+        android:text="NOTE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/abril_fatface"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2.55dp"
+        android:paddingTop="2.5dp"
+        android:textSize="15dp"
+        android:background="@drawable/blue_round_shape"
+        android:id="@+id/label_note"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_note"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="0dp"
+        android:indeterminate="false"
+        android:progressBackgroundTint="@color/white"
+        android:max="5"
+        android:progress="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:text="COMMENTAIRE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/abril_fatface"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2.55dp"
+        android:paddingTop="2.5dp"
+        android:textSize="15dp"
+        android:background="@drawable/blue_round_shape"
+        android:id="@+id/label_commentaire"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/purple_700"
+        android:layout_below="@id/label_commentaire"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:background="@drawable/round_shape_blue_border"
+        android:id="@+id/commentaire_txt"
+        android:lines="5"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/valider"
+        android:id="@+id/valider_btn"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"/>
+
+
+
+
+</RelativeLayout>
